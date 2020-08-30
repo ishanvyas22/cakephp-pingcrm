@@ -4,24 +4,20 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Inertia\Controller\InertiaResponseTrait;
 
 /**
  * Application Controller
  *
  * Add your application-wide methods in the class below, your controllers
  * will inherit them.
- *
- * @link https://book.cakephp.org/3/en/controllers.html#the-app-controller
  */
 class AppController extends Controller
 {
+    use InertiaResponseTrait;
 
     /**
      * Initialization hook method.
-     *
-     * Use this method to add common initialization code like loading components.
-     *
-     * e.g. `$this->loadComponent('Security');`
      *
      * @return void
      */
@@ -33,11 +29,5 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
-
-        /*
-         * Enable the following component for recommended CakePHP security settings.
-         * see https://book.cakephp.org/3/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
     }
 }
