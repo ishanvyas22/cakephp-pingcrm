@@ -21,8 +21,6 @@
         "popper.js": "^1.16.0",
         "portal-vue": "^1.5.1",
         "resolve-url-loader": "^3.1.0",
-        "sass": "^1.15.2",
-        "sass-loader": "^8.0.0",
         "vue": "^2.6.11",
         "vue-meta": "^2.3.1",
         "vue-template-compiler": "^2.6.11"
