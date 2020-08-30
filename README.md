@@ -1,51 +1,79 @@
-# CakePHP Application Skeleton
+# CakePHP - PingCRM
 
-[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 3.x.
-
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+A demo application to illustrate how Inertia.js works with CakePHP.
 
 ## Installation
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+Clone the repo locally:
 
-If Composer is installed globally, run
-
-```bash
-composer create-project --prefer-dist "cakephp/app:^3.8"
+```sh
+git clone git@github.com:ishanvyas22/cakephp-pingcrm.git
+cd cakephp-pingcrm
 ```
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
+Install PHP dependencies:
 
-```bash
-composer create-project --prefer-dist "cakephp/app:^3.8" myapp
+```sh
+composer install
 ```
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+Install NPM dependencies:
 
-```bash
-bin/cake server -p 8765
+```sh
+npm ci
 ```
 
-Then visit `http://localhost:8765` to see the welcome page.
+Build assets:
 
-## Update
+```sh
+npm run dev
+```
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+Setup configuration:
 
-## Configuration
+```sh
+cp .env.example .env
+```
 
-Read and edit `config/app.php` and setup the `'Datasources'` and any other
-configuration relevant for your application.
+Generate application key:
 
-## Layout
+```sh
+php artisan key:generate
+```
 
-The app skeleton uses a subset of [Foundation](http://foundation.zurb.com/) (v5) CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.
+
+```sh
+touch database/database.sqlite
+```
+
+Run database migrations:
+
+```sh
+php artisan migrate
+```
+
+Run database seeder:
+
+```sh
+php artisan db:seed
+```
+
+Run the dev server (the output will give the address):
+
+```sh
+php artisan serve
+```
+
+You're ready to go! Visit Ping CRM in your browser, and login with:
+
+- **Username:** johndoe@example.com
+- **Password:** secret
+
+## Running tests
+
+To run the Ping CRM tests, run:
+
+```
+phpunit
+```
