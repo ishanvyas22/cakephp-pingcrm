@@ -1,7 +1,7 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
-    "homepage": "https://cakephp.org",
+    "name": "ishanvyas22/cakephp-pingcrm",
+    "description": "CakePHP PingCRM application",
+    "homepage": "https://github.com/ishanvyas22/cakephp-pingcrm",
     "type": "project",
     "license": "MIT",
     "require": {
@@ -19,10 +19,6 @@
         "josegonzalez/dotenv": "3.*",
         "phpunit/phpunit": "^5|^6",
         "psy/psysh": "@stable"
-    },
-    "suggest": {
-        "markstory/asset_compress": "An asset compression plugin which provides file concatenation and a flexible filter system for preprocessing and minification.",
-        "dereuromark/cakephp-ide-helper": "After baking your code, this keeps your annotations in sync with the code evolving from there on for maximum IDE and PHPStan/Psalm compatibility."
     },
     "autoload": {
         "psr-4": {
