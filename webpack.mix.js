@@ -7,7 +7,7 @@ const tailwindcss = require('tailwindcss');
 
 mix.setPublicPath('./webroot')
     .js('resources/js/app.js', 'webroot/js')
-    .postCss('resources/css/app.css', 'public/css/app.css')
+    .postCss('resources/css/app.css', 'webroot/css/app.css')
     .options({
         postCss: [
             cssImport(),
