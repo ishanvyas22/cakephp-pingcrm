@@ -1,20 +1,20 @@
-import Vue from 'vue'
-import VueMeta from 'vue-meta'
-import PortalVue from 'portal-vue'
-import { InertiaApp } from '@inertiajs/inertia-vue'
+import Vue from 'vue';
+import VueMeta from 'vue-meta';
+import PortalVue from 'portal-vue';
+import { InertiaApp } from '@inertiajs/inertia-vue';
 
-Vue.config.productionTip = false
-Vue.mixin({ methods: { route: window.route } })
+Vue.config.productionTip = false;
+Vue.mixin({ methods: { route: window.route } });
 
-Vue.use(InertiaApp)
-Vue.use(PortalVue)
-Vue.use(VueMeta)
+Vue.use(InertiaApp);
+Vue.use(PortalVue);
+Vue.use(VueMeta);
 
-let app = document.getElementById('app')
+let app = document.getElementById('app');
 
 new Vue({
     metaInfo: {
-        titleTemplate: (title) => title ? `${title} - AppName` : 'AppName'
+        titleTemplate: (title) => title ? `${title} - CakePHP PingCRM` : 'CakePHP PingCRM'
     },
     render: h => h(InertiaApp, {
         props: {
@@ -22,4 +22,4 @@ new Vue({
             resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
         },
     }),
-}).$mount(app)
+}).$mount(app);
