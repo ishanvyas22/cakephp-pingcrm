@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "654e529dbc85feb7ccd9e06e928da41c",
+    "content-hash": "67c9e531d3b11bd207d29bf8991300bf",
     "packages": [
         {
             "name": "aura/intl",
@@ -293,6 +293,98 @@
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
             "time": "2019-11-12T10:21:19+00:00"
+        },
+        {
+            "name": "ishanvyas22/asset-mix",
+            "version": "0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ishanvyas22/asset-mix.git",
+                "reference": "a35a0f0002eb7fa83bb86bb9e5973a508b7ac598"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ishanvyas22/asset-mix/zipball/a35a0f0002eb7fa83bb86bb9e5973a508b7ac598",
+                "reference": "a35a0f0002eb7fa83bb86bb9e5973a508b7ac598",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": ">=3.5.0 <4.0.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "^3.0",
+                "phpstan/phpstan": "^0.12.32",
+                "phpunit/phpunit": "^5.7.14|^6.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "AssetMix\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ishan Vyas",
+                    "homepage": "https://github.com/ishanvyas22",
+                    "role": "Author"
+                }
+            ],
+            "description": "Asset Mix plugin for CakePHP",
+            "homepage": "https://github.com/ishanvyas22/asset-mix",
+            "keywords": [
+                "assets",
+                "cakephp",
+                "cakephp-plugin",
+                "javascript",
+                "laravel-mix",
+                "less",
+                "minifier",
+                "sass"
+            ],
+            "time": "2020-08-23T06:54:45+00:00"
+        },
+        {
+            "name": "ishanvyas22/cakephp-inertiajs",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ishanvyas22/cakephp-inertiajs.git",
+                "reference": "860704878e210b2fad5228b8b63fc59ab58ba9ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ishanvyas22/cakephp-inertiajs/zipball/860704878e210b2fad5228b8b63fc59ab58ba9ae",
+                "reference": "860704878e210b2fad5228b8b63fc59ab58ba9ae",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": ">=3.5.0 <4.0.0",
+                "ishanvyas22/asset-mix": "^0.6"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "^3.0",
+                "phpstan/phpstan": "^0.12.37",
+                "phpunit/phpunit": "^5.7.14|^6.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Inertia\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The CakePHP adapter for Inertia.js.",
+            "time": "2020-08-29T09:46:28+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
