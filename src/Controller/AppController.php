@@ -30,4 +30,15 @@ class AppController extends Controller
         ]);
         $this->loadComponent('Flash');
     }
+
+    /**
+     * beforeFilter hook.
+     *
+     * @param  \Cake\Event\Event $event The event object.
+     * @return void
+     */
+    public function beforeFilter(Event $event)
+    {
+        $this->set('errors', (object) []);
+    }
 }
