@@ -1,5 +1,6 @@
 <?php
 use Migrations\AbstractSeed;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * Database seed.
@@ -29,13 +30,14 @@ class DatabaseSeed extends AbstractSeed
         $table->insert($accounts)->save();
 
         // Create users
+        $hasher = new DefaultPasswordHasher();
         $users = [
             [
                 'account_id' => '1',
                 'first_name' => 'John',
                 'last_name' => 'Doe',
                 'email' => 'johndoe@example.com',
-                'password' => 'secret',
+                'password' => $hasher->hash('secret'),
                 'owner' => true,
             ],
             [
@@ -43,7 +45,7 @@ class DatabaseSeed extends AbstractSeed
                 'first_name' => 'Adam',
                 'last_name' => 'Doe',
                 'email' => 'adamdoe@example.com',
-                'password' => 'secret',
+                'password' => $hasher->hash('secret'),
                 'owner' => true,
             ],
             [
@@ -51,7 +53,7 @@ class DatabaseSeed extends AbstractSeed
                 'first_name' => 'Denny',
                 'last_name' => 'Doe',
                 'email' => 'dannydoe@example.com',
-                'password' => 'secret',
+                'password' => $hasher->hash('secret'),
                 'owner' => true,
             ],
             [
@@ -59,7 +61,7 @@ class DatabaseSeed extends AbstractSeed
                 'first_name' => 'Kevin',
                 'last_name' => 'Doe',
                 'email' => 'kevindoe@example.com',
-                'password' => 'secret',
+                'password' => $hasher->hash('secret'),
                 'owner' => true,
             ],
             [
@@ -67,7 +69,7 @@ class DatabaseSeed extends AbstractSeed
                 'first_name' => 'Vin',
                 'last_name' => 'Doe',
                 'email' => 'vindoe@example.com',
-                'password' => 'secret',
+                'password' => $hasher->hash('secret'),
                 'owner' => true,
 
             ],
