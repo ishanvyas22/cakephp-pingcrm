@@ -352,16 +352,16 @@
         },
         {
             "name": "ishanvyas22/cakephp-inertiajs",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ishanvyas22/cakephp-inertiajs.git",
-                "reference": "860704878e210b2fad5228b8b63fc59ab58ba9ae"
+                "reference": "482d362e85df5448d42d903cba6d6ab32b7c031d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ishanvyas22/cakephp-inertiajs/zipball/860704878e210b2fad5228b8b63fc59ab58ba9ae",
-                "reference": "860704878e210b2fad5228b8b63fc59ab58ba9ae",
+                "url": "https://api.github.com/repos/ishanvyas22/cakephp-inertiajs/zipball/482d362e85df5448d42d903cba6d6ab32b7c031d",
+                "reference": "482d362e85df5448d42d903cba6d6ab32b7c031d",
                 "shasum": ""
             },
             "require": {
@@ -384,7 +384,7 @@
                 "MIT"
             ],
             "description": "The CakePHP adapter for Inertia.js.",
-            "time": "2020-08-29T09:46:28+00:00"
+            "time": "2020-09-23T18:49:46+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -4732,5 +4732,6 @@
     "platform": {
         "php": ">=5.6"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
