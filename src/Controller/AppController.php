@@ -40,5 +40,6 @@ class AppController extends Controller
     public function beforeFilter(Event $event)
     {
         $this->set('errors', (object) []);
+        $this->set('_csrfToken', $this->request->getParam('_csrfToken'));
     }
 }

@@ -44,6 +44,7 @@ export default {
     },
     props: {
         errors: Object,
+        _csrfToken: String,
     },
     data() {
         return {
@@ -52,17 +53,19 @@ export default {
                 email: 'johndoe@example.com',
                 password: 'secret',
                 remember: null,
+                _csrfToken: this.$page._csrfToken,
             },
         };
     },
     methods: {
         submit() {
             this.sending = true;
+
             this.$inertia
-                .post(this.route('login.attempt'), {
-                    email: this.form.email,
-                    password: this.form.password,
-                    remember: this.form.remember,
+                .post('/auth/login', this.form, {
+                    headers: {
+                        'X-CSRF-Token': this.$page._csrfToken,
+                    },
                 })
                 .then(() => (this.sending = false));
         },
