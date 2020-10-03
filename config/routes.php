@@ -21,5 +21,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/', ['controller' => 'Auth', 'action' => 'login']);
 
+    $routes->connect('/dashboard', ['controller' => 'Dashboard', 'action' => 'index']);
+
     $routes->fallbacks(DashedRoute::class);
 });
