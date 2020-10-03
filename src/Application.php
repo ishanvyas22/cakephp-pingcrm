@@ -3,11 +3,12 @@
 namespace App;
 
 use Cake\Core\Configure;
-use Cake\Core\Exception\MissingPluginException;
-use Cake\Error\Middleware\ErrorHandlerMiddleware;
 use Cake\Http\BaseApplication;
 use Cake\Routing\Middleware\AssetMiddleware;
+use Cake\Http\Middleware\BodyParserMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
+use Cake\Core\Exception\MissingPluginException;
+use Cake\Error\Middleware\ErrorHandlerMiddleware;
 
 /**
  * Application setup class.
@@ -57,6 +58,10 @@ class Application extends BaseApplication
             ->add(new AssetMiddleware([
                 'cacheTime' => Configure::read('Asset.cacheTime'),
             ]))
+
+            // `BodyParserMiddleware` needs to load before `RoutingMiddleware`
+            // in order for `CsrfProtectionMiddleware` to work properly
+            ->add(new BodyParserMiddleware())
 
             // Add routing middleware.
             // If you have a large number of routes connected, turning on routes
