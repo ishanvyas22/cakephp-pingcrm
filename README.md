@@ -35,7 +35,7 @@ Setup configuration:
 cp config/.env.example config/.env
 ```
 
-Create an database of your choice, and simply update your configuration accordingly.
+Create a database of your choice, and simply update your configuration accordingly.
 
 Run database migrations:
 
