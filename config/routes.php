@@ -20,6 +20,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->applyMiddleware('csrf');
 
     $routes->connect('/', ['controller' => 'Auth', 'action' => 'login']);
+    $routes->connect('/logout', ['controller' => 'Auth', 'action' => 'logout']);
 
     $routes->connect('/dashboard', ['controller' => 'Dashboard', 'action' => 'index']);
 
