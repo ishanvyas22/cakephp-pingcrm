@@ -2,9 +2,10 @@
     <div>
         <h1 class="mb-8 font-bold text-3xl">Dashboard</h1>
         <p class="mb-8 leading-normal">
-            Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
+            Hey there! Welcome to CakePHP PingCRM, a demo app designed to help illustrate how
             <a class="text-indigo-500 underline hover:text-orange-600" href="https://inertiajs.com">Inertia.js</a>
-            works.
+            works with
+            <a class="text-indigo-500 underline hover:text-orange-600" href="https://book.cakephp.org/3/en/index.html">CakePHP</a>.
         </p>
         <div class="mb-8 flex">
             <inertia-link class="btn-indigo" href="/500">500 error</inertia-link>

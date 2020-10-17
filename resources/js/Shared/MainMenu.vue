@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="mb-4">
-            <inertia-link class="flex items-center group py-3" :href="route('dashboard')">
+            <inertia-link class="flex items-center group py-3" :href="`/dashboard`">
                 <icon
                     name="dashboard"
                     class="w-4 h-4 mr-2"
@@ -11,7 +11,7 @@
             </inertia-link>
         </div>
         <div class="mb-4">
-            <inertia-link class="flex items-center group py-3" :href="route('organizations')">
+            <inertia-link class="flex items-center group py-3" :href="`/organizations`">
                 <icon
                     name="office"
                     class="w-4 h-4 mr-2"
@@ -23,7 +23,7 @@
             </inertia-link>
         </div>
         <div class="mb-4">
-            <inertia-link class="flex items-center group py-3" :href="route('contacts')">
+            <inertia-link class="flex items-center group py-3" :href="`/contacts`">
                 <icon
                     name="users"
                     class="w-4 h-4 mr-2"
@@ -33,7 +33,7 @@
             </inertia-link>
         </div>
         <div class="mb-4">
-            <inertia-link class="flex items-center group py-3" :href="route('reports')">
+            <inertia-link class="flex items-center group py-3" :href="`/reports`">
                 <icon
                     name="printer"
                     class="w-4 h-4 mr-2"

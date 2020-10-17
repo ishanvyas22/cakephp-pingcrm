@@ -42,5 +42,34 @@ class AppController extends Controller
     {
         $this->set('errors', (object) []);
         $this->set('_csrfToken', $this->request->getParam('_csrfToken'));
+
+        $this->setAuthData();
+    }
+
+    /**
+     * Sets authentication data into front-end on every request.
+     *
+     * @return null|void
+     */
+    private function setAuthData()
+    {
+        $identity = $this->Authentication->getIdentity();
+
+        if ($identity === null) {
+            return null;
+        }
+
+        $this->set('auth', [
+            'user' => [
+                'id' => $identity->get('id'),
+                'first_name' => $identity->get('first_name'),
+                'last_name' => $identity->get('last_name'),
+                'email' => $identity->get('email'),
+                'account' => [
+                    // TODO: Set account name dynamically
+                    'name' => 'test'
+                ]
+            ]
+        ]);
     }
 }
