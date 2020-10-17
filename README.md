@@ -20,7 +20,7 @@ composer install
 Install NPM dependencies:
 
 ```sh
-npm ci
+npm install
 ```
 
 Build assets:
@@ -32,37 +32,27 @@ npm run dev
 Setup configuration:
 
 ```sh
-cp .env.example .env
+cp config/.env.example config/.env
 ```
 
-Generate application key:
-
-```sh
-php artisan key:generate
-```
-
-Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.
-
-```sh
-touch database/database.sqlite
-```
+Create an database of your choice, and simply update your configuration accordingly.
 
 Run database migrations:
 
 ```sh
-php artisan migrate
+bin/cake migrations migrate
 ```
 
 Run database seeder:
 
 ```sh
-php artisan db:seed
+bin/cake migrations seed --seed=DatabaseSeed
 ```
 
 Run the dev server (the output will give the address):
 
 ```sh
-php artisan serve
+bin/cake server
 ```
 
 You're ready to go! Visit Ping CRM in your browser, and login with:
@@ -72,7 +62,7 @@ You're ready to go! Visit Ping CRM in your browser, and login with:
 
 ## Running tests
 
-To run the Ping CRM tests, run:
+To run the CakePHP PingCRM tests, run:
 
 ```
 phpunit
