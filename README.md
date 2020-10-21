@@ -4,58 +4,65 @@ A demo application to illustrate how Inertia.js works with CakePHP.
 
 ## Installation
 
-Clone the repo locally:
+1. Download the repo locally:
 
-```sh
-git clone git@github.com:ishanvyas22/cakephp-pingcrm.git
-cd cakephp-pingcrm
-```
+    Via [composer](https://getcomposer.org/):
+    ```sh
+    composer create-project ishanvyas22/cakephp-pingcrm
+    ```
 
-Install PHP dependencies:
+    **or**
 
-```sh
-composer install
-```
+    Via cloning the git repo:
+    ```sh
+    git clone git@github.com:ishanvyas22/cakephp-pingcrm.git
+    ```
 
-Install NPM dependencies:
+2. Install PHP dependencies:
 
-```sh
-npm install
-```
+    ```sh
+    composer install
+    ```
 
-Build assets:
+3. Install NPM dependencies:
 
-```sh
-npm run dev
-```
+    ```sh
+    npm install
+    ```
 
-Setup configuration:
+4. Build assets:
 
-```sh
-cp config/.env.example config/.env
-```
+    ```sh
+    npm run dev
+    ```
 
-Create a database of your choice, and simply update your configuration accordingly.
+## Setup
 
-Run database migrations:
+1. Create `.env` file
 
-```sh
-bin/cake migrations migrate
-```
+    ```sh
+    cp config/.env.example config/.env
+    ```
 
-Run database seeder:
+2. Connect to database. Create a database of your choice, and simply update your configuration accordingly.
 
-```sh
-bin/cake migrations seed --seed=DatabaseSeed
-```
+    Run database migrations:
+    ```sh
+    bin/cake migrations migrate
+    ```
 
-Run the dev server (the output will give the address):
+    Run database seeder:
+    ```sh
+    bin/cake migrations seed --seed=DatabaseSeed
+    ```
 
-```sh
-bin/cake server
-```
+3. Run the dev server (the output will give the address):
 
-You're ready to go! Visit Ping CRM in your browser, and login with:
+    ```sh
+    bin/cake server
+    ```
+
+You're ready to go! Visit CakePHP PingCRM in your browser, and login with:
 
 - **Username:** johndoe@example.com
 - **Password:** secret
