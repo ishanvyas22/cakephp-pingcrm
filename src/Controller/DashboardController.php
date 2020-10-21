@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use Exception;
 use App\Controller\AppController;
 
 /**
@@ -15,5 +16,15 @@ class DashboardController extends AppController
      */
     public function index()
     {
+    }
+
+    /**
+     * Internal Server Error method
+     *
+     * @return \Cake\Http\Response|null
+     */
+    public function internalServerError()
+    {
+        throw new Exception('500 error!');
     }
 }

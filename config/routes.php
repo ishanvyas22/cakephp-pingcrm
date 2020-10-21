@@ -24,5 +24,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/dashboard', ['controller' => 'Dashboard', 'action' => 'index']);
 
+    $routes->connect('/500',['controller' => 'Dashboard', 'action' => 'internalServerError']);
+
     $routes->fallbacks(DashedRoute::class);
 });
