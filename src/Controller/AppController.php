@@ -17,6 +17,13 @@ class AppController extends Controller
     use InertiaResponseTrait;
 
     /**
+     * Session object.
+     *
+     * @var \Cake\Http\Session
+     */
+    protected $_session = null;
+
+    /**
      * Initialization hook method.
      *
      * @return void
@@ -30,6 +37,8 @@ class AppController extends Controller
         ]);
         $this->loadComponent('Flash');
         $this->loadComponent('Authentication.Authentication');
+
+        $this->_session = $this->getRequest()->getSession();
     }
 
     /**
@@ -40,8 +49,8 @@ class AppController extends Controller
      */
     public function beforeFilter(Event $event)
     {
-        $this->set('errors', (object) []);
-        $this->set('_csrfToken', $this->request->getParam('_csrfToken'));
+        $this->set('errors', []);
+        $this->set('_csrfToken', $this->getRequest()->getParam('_csrfToken'));
 
         $this->setAuthData();
     }
