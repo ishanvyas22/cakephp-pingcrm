@@ -66,11 +66,3 @@ You're ready to go! Visit CakePHP PingCRM in your browser, and login with:
 
 - **Username:** johndoe@example.com
 - **Password:** secret
-
-## Running tests
-
-To run the CakePHP PingCRM tests, run:
-
-```
-phpunit
-```
