@@ -354,16 +354,16 @@
         },
         {
             "name": "ishanvyas22/asset-mix",
-            "version": "0.6.1",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ishanvyas22/asset-mix.git",
-                "reference": "a35a0f0002eb7fa83bb86bb9e5973a508b7ac598"
+                "reference": "baa89c483f67e03e06551d9731fb1fa7dc4d8bf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ishanvyas22/asset-mix/zipball/a35a0f0002eb7fa83bb86bb9e5973a508b7ac598",
-                "reference": "a35a0f0002eb7fa83bb86bb9e5973a508b7ac598",
+                "url": "https://api.github.com/repos/ishanvyas22/asset-mix/zipball/baa89c483f67e03e06551d9731fb1fa7dc4d8bf4",
+                "reference": "baa89c483f67e03e06551d9731fb1fa7dc4d8bf4",
                 "shasum": ""
             },
             "require": {
@@ -406,20 +406,20 @@
                 "minifier",
                 "sass"
             ],
-            "time": "2020-08-23T06:54:45+00:00"
+            "time": "2020-08-30T16:29:50+00:00"
         },
         {
             "name": "ishanvyas22/cakephp-inertiajs",
-            "version": "1.1.3",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ishanvyas22/cakephp-inertiajs.git",
-                "reference": "744e85dc7281a0bb2d889a2e6f9f37beff58fcc5"
+                "reference": "3600550eb50500da811654f68981be11043715a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ishanvyas22/cakephp-inertiajs/zipball/744e85dc7281a0bb2d889a2e6f9f37beff58fcc5",
-                "reference": "744e85dc7281a0bb2d889a2e6f9f37beff58fcc5",
+                "url": "https://api.github.com/repos/ishanvyas22/cakephp-inertiajs/zipball/3600550eb50500da811654f68981be11043715a0",
+                "reference": "3600550eb50500da811654f68981be11043715a0",
                 "shasum": ""
             },
             "require": {
@@ -442,7 +442,7 @@
                 "MIT"
             ],
             "description": "The CakePHP adapter for Inertia.js.",
-            "time": "2020-10-21T18:18:19+00:00"
+            "time": "2020-10-25T07:23:39+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -1939,6 +1939,7 @@
                 "extension",
                 "twig"
             ],
+            "abandoned": "twig/cache-extension",
             "time": "2020-01-01T20:47:37+00:00"
         },
         {
