@@ -43,7 +43,7 @@ export default {
         TextInput,
     },
     props: {
-        errors: Object,
+        errors: Array,
         _csrfToken: String,
     },
     data() {
