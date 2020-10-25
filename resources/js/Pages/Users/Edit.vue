@@ -2,7 +2,7 @@
     <div>
         <div class="mb-8 flex justify-start max-w-3xl">
             <h1 class="font-bold text-3xl">
-                <inertia-link class="text-indigo-400 hover:text-indigo-600" :href="route('users')">Users</inertia-link>
+                <inertia-link class="text-indigo-400 hover:text-indigo-600" href="/users">Users</inertia-link>
                 <span class="text-indigo-400 font-medium">/</span>
                 {{ form.first_name }} {{ form.last_name }}
             </h1>
@@ -100,7 +100,7 @@ export default {
         TrashedMessage,
     },
     props: {
-        errors: Object,
+        errors: Array,
         user: Object,
     },
     remember: 'form',
@@ -130,7 +130,7 @@ export default {
             data.append('photo', this.form.photo || '');
             data.append('_method', 'put');
 
-            this.$inertia.post(this.route('users.update', this.user.id), data).then(() => {
+            this.$inertia.post(`/users/edit/${this.user.id}`, data).then(() => {
                 this.sending = false;
                 if (Object.keys(this.$page.errors).length === 0) {
                     this.form.photo = null;
@@ -140,12 +140,12 @@ export default {
         },
         destroy() {
             if (confirm('Are you sure you want to delete this user?')) {
-                this.$inertia.delete(this.route('users.destroy', this.user.id));
+                this.$inertia.delete(`/users/delete/${this.user.id}`);
             }
         },
         restore() {
             if (confirm('Are you sure you want to restore this user?')) {
-                this.$inertia.put(this.route('users.restore', this.user.id));
+                this.$inertia.put(`/users/restore/${this.user.id}`);
             }
         },
     },
