@@ -313,26 +313,26 @@
         },
         {
             "name": "cakephp/plugin-installer",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/plugin-installer.git",
-                "reference": "549548a7aa308ecee4059c2d10a7d8d5d1002602"
+                "reference": "e27027aa2d3d8ab64452c6817629558685a064cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/plugin-installer/zipball/549548a7aa308ecee4059c2d10a7d8d5d1002602",
-                "reference": "549548a7aa308ecee4059c2d10a7d8d5d1002602",
+                "url": "https://api.github.com/repos/cakephp/plugin-installer/zipball/e27027aa2d3d8ab64452c6817629558685a064cb",
+                "reference": "e27027aa2d3d8ab64452c6817629558685a064cb",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0 || ^2.0",
-                "php": ">=7.2.0"
+                "php": ">=5.6.0"
             },
             "require-dev": {
-                "cakephp/cakephp-codesniffer": "^4.1",
-                "composer/composer": "^2.0@RC",
-                "phpunit/phpunit": "^8.5 || ^9.3"
+                "cakephp/cakephp-codesniffer": "^3.3",
+                "composer/composer": "^2.0",
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^8.5 || ^9.3"
             },
             "type": "composer-plugin",
             "extra": {
@@ -354,7 +354,11 @@
                 }
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
-            "time": "2020-10-24T07:29:47+00:00"
+            "support": {
+                "issues": "https://github.com/cakephp/plugin-installer/issues",
+                "source": "https://github.com/cakephp/plugin-installer/tree/1.3.1"
+            },
+            "time": "2020-10-29T04:00:42+00:00"
         },
         {
             "name": "ishanvyas22/asset-mix",
@@ -5074,5 +5078,5 @@
         "php": ">=5.6"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
