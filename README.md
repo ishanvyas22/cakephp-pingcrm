@@ -2,6 +2,8 @@
 
 A demo application to illustrate how Inertia.js works with CakePHP.
 
+![](https://raw.githubusercontent.com/ishanvyas22/cakephp-pingcrm/master/Dashboard_CakePHP_PingCRM.png)
+
 ## Installation
 
 1. Download the repo locally:
