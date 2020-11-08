@@ -128,7 +128,7 @@ export default {
             data.append('password', this.form.password || '');
             data.append('owner', this.form.owner ? '1' : '0');
             data.append('photo', this.form.photo || '');
-            data.append('_method', 'put');
+            data.append('_csrfToken', this.$page._csrfToken);
 
             this.$inertia.post(`/users/edit/${this.user.id}`, data).then(() => {
                 this.sending = false;
