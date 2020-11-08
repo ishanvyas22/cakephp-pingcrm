@@ -1,6 +1,6 @@
 {
     "name": "ishanvyas22/cakephp-pingcrm",
-    "description": "CakePHP PingCRM application",
+    "description": "CakePHP PingCRM demo application to illustrate how Inertia.js works with CakePHP.",
     "homepage": "https://github.com/ishanvyas22/cakephp-pingcrm",
     "type": "project",
     "license": "MIT",
