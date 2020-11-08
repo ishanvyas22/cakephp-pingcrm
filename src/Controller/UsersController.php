@@ -87,11 +87,12 @@ class UsersController extends AppController
             ->firstOrFail();
 
         if ($this->request->is(['patch', 'post', 'put'])) {
+            // TODO: Upload photo
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect($this->referer());
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
