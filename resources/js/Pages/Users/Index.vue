@@ -16,7 +16,7 @@
                     <option value="only">Only Trashed</option>
                 </select>
             </search-filter>
-            <inertia-link class="btn-indigo" :href="route('users.create')">
+            <inertia-link class="btn-indigo" href="`/users/add`">
                 <span>Create</span>
                 <span class="hidden md:inline">User</span>
             </inertia-link>
@@ -32,7 +32,7 @@
                     <td class="border-t">
                         <inertia-link
                             class="px-6 py-4 flex items-center focus:text-indigo-500"
-                            :href="route('users.edit', user.id)"
+                            :href="`/users/edit/${user.id}`"
                         >
                             <img v-if="user.photo" class="block w-5 h-5 rounded-full mr-2 -my-2" :src="user.photo" />
                             {{ user.name }}
@@ -46,7 +46,7 @@
                     <td class="border-t">
                         <inertia-link
                             class="px-6 py-4 flex items-center"
-                            :href="route('users.edit', user.id)"
+                            :href="`/users/edit/${user.id}`"
                             tabindex="-1"
                         >
                             {{ user.email }}
@@ -55,14 +55,14 @@
                     <td class="border-t">
                         <inertia-link
                             class="px-6 py-4 flex items-center"
-                            :href="route('users.edit', user.id)"
+                            :href="`/users/edit/${user.id}`"
                             tabindex="-1"
                         >
                             {{ user.owner ? 'Owner' : 'User' }}
                         </inertia-link>
                     </td>
                     <td class="border-t w-px">
-                        <inertia-link class="px-4 flex items-center" :href="route('users.edit', user.id)" tabindex="-1">
+                        <inertia-link class="px-4 flex items-center" :href="`/users/edit/${user.id}`" tabindex="-1">
                             <icon name="cheveron-right" class="block w-6 h-6 fill-gray-400" />
                         </inertia-link>
                     </td>
@@ -106,8 +106,11 @@ export default {
     watch: {
         form: {
             handler: throttle(function () {
-                let query = pickBy(this.form);
-                this.$inertia.replace(this.route('users', Object.keys(query).length ? query : { remember: 'forget' }));
+                let query = Object.keys(pickBy(this.form)).length ? pickBy(this.form) : { remember: 'forget' };
+
+                this.$inertia.replace(`/users`, {
+                    'data': query
+                });
             }, 150),
             deep: true,
         },

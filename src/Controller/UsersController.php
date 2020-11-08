@@ -19,12 +19,18 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Accounts'],
+        $filters = [
+            'search' => $this->getRequest()->getQuery('search') ?? '',
+            'role' => $this->getRequest()->getQuery('role') ?? '',
+            'trashed' => $this->getRequest()->getQuery('trashed') ?? '',
         ];
-        $users = $this->paginate($this->Users);
 
-        $this->set(compact('users'));
+        $users = $this->Users->find()->where([
+            'account_id' => $this->getRequest()->getAttribute('identity')->get('account_id')
+        ])->toArray();
+
+
+        $this->set(compact('users', 'filters'));
     }
 
     /**

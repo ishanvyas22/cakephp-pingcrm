@@ -51,4 +51,21 @@ class User extends Entity
     protected $_hidden = [
         'password',
     ];
+
+    /**
+     * Virtual fields.
+     *
+     * @var array
+     */
+    protected $_virtual = ['name'];
+
+    /**
+     * Name virtual field.
+     *
+     * @return string
+     */
+    protected function _getName()
+    {
+        return $this->first_name . '  ' . $this->last_name;
+    }
 }
