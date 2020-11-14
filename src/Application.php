@@ -118,7 +118,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
 
         $fields = [
             'username' => 'email',
-            'password' => 'password'
+            'password' => 'password',
         ];
 
         // Load identifiers
@@ -128,7 +128,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
         $service->loadAuthenticator('Authentication.Session');
         $service->loadAuthenticator('Authentication.Form', [
             'fields' => $fields,
-            'loginUrl' => '/auth/login'
+            'loginUrl' => '/auth/login',
         ]);
 
         return $service;

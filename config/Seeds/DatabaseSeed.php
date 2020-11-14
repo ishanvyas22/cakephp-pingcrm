@@ -24,7 +24,7 @@ class DatabaseSeed extends AbstractSeed
             [
                 'id' => '1',
                 'name' => 'Acme Corporation',
-            ]
+            ],
         ];
         $table = $this->table('accounts');
         $table->insert($accounts)->save();

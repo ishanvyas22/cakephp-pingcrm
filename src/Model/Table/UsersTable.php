@@ -148,9 +148,12 @@ class UsersTable extends Table
         }
 
         switch ($options['role']) {
-            case 'user': return $query->where(['owner' => false]);
-            case 'owner': return $query->where(['owner' => true]);
-            default: return $query;
+            case 'user':
+                return $query->where(['owner' => false]);
+            case 'owner':
+                return $query->where(['owner' => true]);
+            default:
+                return $query;
         }
     }
 }

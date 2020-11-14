@@ -75,9 +75,9 @@ class AppController extends Controller
                 'email' => $identity->get('email'),
                 'account' => [
                     // TODO: Set account name dynamically
-                    'name' => 'test'
-                ]
-            ]
+                    'name' => 'test',
+                ],
+            ],
         ]);
     }
 }
