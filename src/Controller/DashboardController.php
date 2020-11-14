@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller;
 
-use Exception;
 use App\Controller\AppController;
+use Exception;
 
 /**
  * Dashboard Controller
@@ -12,7 +12,7 @@ class DashboardController extends AppController
     /**
      * Index method
      *
-     * @return \Cake\Http\Response|null
+     * @return void
      */
     public function index()
     {
@@ -21,7 +21,7 @@ class DashboardController extends AppController
     /**
      * Internal Server Error method
      *
-     * @return \Cake\Http\Response|null
+     * @return void
      */
     public function internalServerError()
     {

@@ -74,7 +74,7 @@ class AppController extends Controller
                 'last_name' => $identity->get('last_name'),
                 'email' => $identity->get('email'),
                 'account' => [
-                    // TODO: Set account name dynamically
+                    // Set account name dynamically
                     'name' => 'test',
                 ],
             ],

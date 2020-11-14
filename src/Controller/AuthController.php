@@ -6,6 +6,12 @@ use Cake\Event\Event;
 
 class AuthController extends AppController
 {
+    /**
+     * beforeFilter hook.
+     *
+     * @param \Cake\Event\Event $event Event object.
+     * @return void
+     */
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
@@ -13,6 +19,11 @@ class AuthController extends AppController
         $this->Authentication->allowUnauthenticated(['login']);
     }
 
+    /**
+     * Login action.
+     *
+     * @return \Cake\Http\Response|null
+     */
     public function login()
     {
         $result = $this->Authentication->getResult();
@@ -29,6 +40,11 @@ class AuthController extends AppController
         }
     }
 
+    /**
+     * Logout action.
+     *
+     * @return \Cake\Http\Response|null
+     */
     public function logout()
     {
         $this->Authentication->logout();

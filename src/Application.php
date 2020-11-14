@@ -2,18 +2,18 @@
 
 namespace App;
 
-use Cake\Core\Configure;
-use Cake\Http\BaseApplication;
-use Psr\Http\Message\ResponseInterface;
 use Authentication\AuthenticationService;
-use Cake\Routing\Middleware\AssetMiddleware;
-use Psr\Http\Message\ServerRequestInterface;
-use Cake\Http\Middleware\BodyParserMiddleware;
-use Cake\Routing\Middleware\RoutingMiddleware;
+use Authentication\AuthenticationServiceProviderInterface;
+use Authentication\Middleware\AuthenticationMiddleware;
+use Cake\Core\Configure;
 use Cake\Core\Exception\MissingPluginException;
 use Cake\Error\Middleware\ErrorHandlerMiddleware;
-use Authentication\Middleware\AuthenticationMiddleware;
-use Authentication\AuthenticationServiceProviderInterface;
+use Cake\Http\BaseApplication;
+use Cake\Http\Middleware\BodyParserMiddleware;
+use Cake\Routing\Middleware\AssetMiddleware;
+use Cake\Routing\Middleware\RoutingMiddleware;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * Application setup class.

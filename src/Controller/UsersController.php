@@ -17,7 +17,7 @@ class UsersController extends AppController
     /**
      * Index method
      *
-     * @return \Cake\Http\Response|null
+     * @return void
      */
     public function index()
     {
@@ -39,7 +39,7 @@ class UsersController extends AppController
      * View method
      *
      * @param string|null $id User id.
-     * @return \Cake\Http\Response|null
+     * @return void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null)
@@ -95,7 +95,7 @@ class UsersController extends AppController
             ->firstOrFail();
 
         if ($this->request->is(['patch', 'post', 'put'])) {
-            // TODO: Upload photo
+            // Upload photo
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
