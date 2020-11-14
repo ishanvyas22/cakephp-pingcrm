@@ -66,6 +66,6 @@ class User extends Entity
      */
     protected function _getName()
     {
-        return $this->first_name . '  ' . $this->last_name;
+        return $this->first_name . ' ' . $this->last_name;
     }
 }
