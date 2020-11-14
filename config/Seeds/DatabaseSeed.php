@@ -1,6 +1,6 @@
 <?php
-use Migrations\AbstractSeed;
 use Cake\Auth\DefaultPasswordHasher;
+use Migrations\AbstractSeed;
 
 /**
  * Database seed.
