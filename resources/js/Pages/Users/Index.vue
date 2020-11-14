@@ -106,7 +106,7 @@ export default {
     watch: {
         form: {
             handler: throttle(function () {
-                let query = Object.keys(pickBy(this.form)).length ? pickBy(this.form) : { remember: 'forget' };
+                let query = Object.keys(pickBy(this.form)).length ? pickBy(this.form) : {};
 
                 this.$inertia.replace(`/users`, {
                     'data': query

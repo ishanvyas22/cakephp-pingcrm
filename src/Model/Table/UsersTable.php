@@ -1,6 +1,7 @@
 <?php
 namespace App\Model\Table;
 
+use Cake\Database\Expression\QueryExpression;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
@@ -106,5 +107,50 @@ class UsersTable extends Table
         $rules->add($rules->existsIn(['account_id'], 'Accounts'));
 
         return $rules;
+    }
+
+    /**
+     * Filter the given search result with given text.
+     *
+     * @param \Cake\ORM\Query $query Query object.
+     * @param array $options Options array.
+     * @return \Cake\ORM\Query
+     */
+    public function findFilter(Query $query, array $options)
+    {
+        if ($options['search'] === null) {
+            return $query;
+        }
+
+        $search = $options['search'];
+
+        return $query->where(function (QueryExpression $exp, Query $q) use ($search) {
+            return $exp->or(function (QueryExpression $or) use ($search) {
+                return $or
+                    ->like('first_name', "%{$search}%")
+                    ->like('last_name', "%{$search}%")
+                    ->like('email', "%{$search}%");
+            });
+        });
+    }
+
+    /**
+     * Find role of given text.
+     *
+     * @param \Cake\ORM\Query $query Query object.
+     * @param array $options Options array.
+     * @return \Cake\ORM\Query
+     */
+    public function findRole(Query $query, array $options)
+    {
+        if ($options['role'] === null) {
+            return $query;
+        }
+
+        switch ($options['role']) {
+            case 'user': return $query->where(['owner' => false]);
+            case 'owner': return $query->where(['owner' => true]);
+            default: return $query;
+        }
     }
 }

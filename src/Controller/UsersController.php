@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Database\Expression\QueryExpression;
+use Cake\ORM\Query;
 
 /**
  * Users Controller
@@ -25,10 +27,10 @@ class UsersController extends AppController
             'trashed' => $this->getRequest()->getQuery('trashed') ?? '',
         ];
 
-        $users = $this->Users->find()->where([
-            'account_id' => $this->getRequest()->getAttribute('identity')->get('account_id')
-        ])->toArray();
-
+        $users = $this->Users->find('all')
+            ->find('filter', ['search' => $this->getRequest()->getQuery('search')])
+            ->find('role', ['role' => $this->getRequest()->getQuery('role')])
+            ->toArray();
 
         $this->set(compact('users', 'filters'));
     }
