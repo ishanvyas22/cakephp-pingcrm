@@ -450,6 +450,10 @@
                 "MIT"
             ],
             "description": "The CakePHP adapter for Inertia.js.",
+            "support": {
+                "issues": "https://github.com/ishanvyas22/cakephp-inertiajs/issues",
+                "source": "https://github.com/ishanvyas22/cakephp-inertiajs/tree/1.3.0"
+            },
             "time": "2020-10-25T11:05:23+00:00"
         },
         {
