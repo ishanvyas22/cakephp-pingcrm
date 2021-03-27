@@ -50,8 +50,8 @@ export default {
         return {
             sending: false,
             form: {
-                email: '',
-                password: '',
+                email: 'johndoe@example.com',
+                password: 'secret',
                 remember: null,
                 _csrfToken: this.$page._csrfToken,
             },
