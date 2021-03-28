@@ -82,5 +82,3 @@ You're ready to go! Visit CakePHP PingCRM in your browser, and login with:
 
 **or** [Paypal me](https://paypal.me/IshanVyas?locale.x=en_GB)
 
-## License
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
