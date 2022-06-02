@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.6",
         "cakephp/authentication": "^1.0",
-        "cakephp/cakephp": "3.9.*",
+        "cakephp/cakephp": "3.10.*",
         "cakephp/migrations": "^2.0.0",
         "cakephp/plugin-installer": "^1.0",
         "ishanvyas22/cakephp-inertiajs": "^1.0",
